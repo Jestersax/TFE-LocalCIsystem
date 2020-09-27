@@ -200,7 +200,7 @@ As we did with the credentials of the gitea user, so we could store them in jenk
 
 We need to download a jenkins plugin called "SonarQube SonarScanner". Configuration is similar to the gitea servers plugin setup:
 
-![Sonar server](https://github.com/Jestersax/TFE-LocalCIsystem/blob/images/guide-images/jenkins-sonar-config.pngg "Sonar plugin configuration")
+![Sonar server](https://github.com/Jestersax/TFE-LocalCIsystem/blob/images/guide-images/jenkins-sonar-config.png "Sonar plugin configuration")
 
 Server URL merging the name of the sonarqube service in our cluster, namespace, svc, cluster.local, and the inner port from our service (9000). As credentials, we use the authentication token previously stored at jenkins administration.
 
