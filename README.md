@@ -10,13 +10,15 @@ This system includes Gitea as code host, Jenkins as the automation server, and S
 
 [2. Getting Started](https://github.com/Jestersax/TFE-LocalCIsystem#getting-started)
 
-[2.1. Minikube Cluster](https://github.com/Jestersax/TFE-LocalCIsystem#minikube-cluster)
+...[2.1. Minikube Cluster](https://github.com/Jestersax/TFE-LocalCIsystem#minikube-cluster)
 
 [3. Deploying tools](https://github.com/Jestersax/TFE-LocalCIsystem#deploying-tools)
 
-[3.1. Gitea](https://github.com/Jestersax/TFE-LocalCIsystem#gitea)
-[3.2. Jenkins](https://github.com/Jestersax/TFE-LocalCIsystem#jenkins)
-[3.3. SonarQube](https://github.com/Jestersax/TFE-LocalCIsystem#sonarqube)
+...[3.1. Gitea](https://github.com/Jestersax/TFE-LocalCIsystem#gitea)
+
+...[3.2. Jenkins](https://github.com/Jestersax/TFE-LocalCIsystem#jenkins)
+
+...[3.3. SonarQube](https://github.com/Jestersax/TFE-LocalCIsystem#sonarqube)
 
 [4. Integrating tools - guide](https://github.com/Jestersax/TFE-LocalCIsystem#integration-tools--guide)
 
@@ -90,6 +92,7 @@ Ready to deploy jenkins in our cluster:
 ```
 helm install jenkins stable/jenkins -f jenkins-values.yaml
 ```
+It'll show a command to get your admin password in Jenkins. Execute that command and write down your password for later.
 
 ### SONARQUBE
 
@@ -120,6 +123,30 @@ Ready to deploy gitea in our cluster with Helm:
 helm install sonarqube oteemocharts/sonarqube -f sonarqube-values.yaml
 ```
 
+## INTEGRATING TOOLS GUIDE
+
+### GITEA - JENKINS INTEGRATION
+
+
+First, we'll need to access gitea service and jenkins server through our browser. To list the services deployed in your cluster, you use the command:
+```
+kubectl get services
+```
+
+To access the services, you can do it using their IP address within the cluster or using the next command:
+```
+minikube service [servicenameinourcluster]
+```
+
+In this case:
+```
+minikube service gitea-gitea-http
+```
+```
+minikube service jenkins
+```
+
+Once you access them through the browser, you need to create a user in gitea so you can commit changes to your code, create repositories, etc.
 
 
 
