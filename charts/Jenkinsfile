@@ -1,0 +1,48 @@
+pipeline {
+  agent {
+    kubernetes {
+      yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  containers:
+  - name: maven
+    image: maven:3-alpine
+    command:
+    - cat
+    tty: true
+  - name: python
+    image: python:alpine3.11
+    command:
+    - cat
+    tty: true"""
+    }
+  }
+  stages {
+    stage('Sonarqube Analysis') {
+        environment {
+            scannerHome = tool 'SonarScanner'
+        }
+        steps {
+            container('maven'){
+                withSonarQubeEnv('Sonar Server') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+    }
+    stage('Compile'){
+      steps{
+          container('python'){
+              sh "python prueba.py"
+          }
+      }
+    }
+  }
+}
