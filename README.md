@@ -10,13 +10,13 @@ This system includes Gitea as code host, Jenkins as the automation server, and S
 
 [2. Getting Started](https://github.com/Jestersax/TFE-LocalCIsystem#getting-started)
 
-    [2.1. Minikube Cluster](https://github.com/Jestersax/TFE-LocalCIsystem#minikube-cluster)
+[2.1. Minikube Cluster](https://github.com/Jestersax/TFE-LocalCIsystem#minikube-cluster)
 
 [3. Deploying tools](https://github.com/Jestersax/TFE-LocalCIsystem#deploying-tools)
 
-    [3.1. Gitea](https://github.com/Jestersax/TFE-LocalCIsystem#gitea)
-    [3.2. Jenkins](https://github.com/Jestersax/TFE-LocalCIsystem#jenkins)
-    [3.3. SonarQube](https://github.com/Jestersax/TFE-LocalCIsystem#sonarqube)
+[3.1. Gitea](https://github.com/Jestersax/TFE-LocalCIsystem#gitea)
+[3.2. Jenkins](https://github.com/Jestersax/TFE-LocalCIsystem#jenkins)
+[3.3. SonarQube](https://github.com/Jestersax/TFE-LocalCIsystem#sonarqube)
 
 [4. Integrating tools - guide](https://github.com/Jestersax/TFE-LocalCIsystem#integration-tools--guide)
 
