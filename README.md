@@ -147,7 +147,8 @@ minikube service jenkins
 ```
 
 Once you access them through the browser, you need to create a user in gitea so you can commit changes to your code, create repositories, etc.
-
+ 
+![credentials](https://github.com/Jestersax/TFE-LocalCIsystem/blob/images/guide-images/jenkins-credentials.png "Jenkins credentials")
 
 
 
