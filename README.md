@@ -50,7 +50,7 @@ The amount of memory we set for this cluster is enough to make de CI system work
 
 Here I'll explain how to get the helm charts needed, and how to change them so the tool fits in the CI system designed for this thesis, so you know how to modify them to make them fit in your own continous integration system.
 
-If you are not intrested in learning about that, you can just get all the helm charts [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/charts)
+If you are not intrested in learning about that, you can just get all the helm charts [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/tree/master/charts)
 
 ### GITEA
 
@@ -173,7 +173,7 @@ Jenkins > create new job > Multibranch pipeline
 
 Pointing at the gitea server you configurated in the step before, you set the name of the owner of the code's repository, and the repository you want to execute the automations on. For the build configuration, you'll need to add a 'Jenkinsfile' to your repository branch.
 
-The jenkinsfile is where you configure the stages of a pipeline. You can get one to start with [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/charts/Jenkinsfile)
+The jenkinsfile is where you configure the stages of a pipeline. You can get one to start with [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/blob/master/charts/Jenkinsfile)
 
 When you have all this set up, all that's left to set for gitea is a Webhook, so a branch pipeline build is launched when there's an event going on in the code repository.
 
@@ -218,4 +218,4 @@ sonar.language=
 
 In that file, we need to set the name and the key of the analysis project we have created in Sonar, and the programing language that we want to analyze with sonar.
 
-You can get that sonar.properties file [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/charts/sonar-project.properties) ; You'll need to set the name of the project you have created, the key to that project, and the language you would like to analyze.
+You can get that sonar.properties file [HERE](https://github.com/Jestersax/TFE-LocalCIsystem/blob/master/charts/sonar-project.properties) ; You'll need to set the name of the project you have created, the key to that project, and the language you would like to analyze.
