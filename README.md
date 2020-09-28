@@ -5,6 +5,12 @@ Here, I'm about to explain how to install and configure the local system for con
 
 This system includes Gitea as code host, Jenkins as the automation server, and SonarQube for analyzing the code included in Gitea, generating quality metrics so you can get info about the reliability, availability, usability and security of the software you would be developing.
 
+# Thesis powerpoint presentation
+
+You would also find in the presentation a couple of videos that show how the CI system works.
+
+[PPT Presentation](https://github.com/Jestersax/TFE-LocalCIsystem/blob/images/guide-images/TFG_DevOps_Esther_Anton.pptx) 
+
 # Table of contents
 [1. Previous steps](https://github.com/Jestersax/TFE-LocalCIsystem#previous-steps)
 
